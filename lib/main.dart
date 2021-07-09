@@ -15,34 +15,32 @@ class MyApp extends StatelessWidget {
         ),
         backgroundColor: Colors.blueGrey[200],
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Container(
-                height: 100,
+          child: Column(children: <Widget>[
+            CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage('images/owl.png'),
+            ),
+            Text(
+              "Shungo Kusakabe",
+              style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 30,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600),
+            ),
+            Text(
+              "Flutter Developer",
+              style: TextStyle(
+                fontFamily: 'SourceSansPro',
                 color: Colors.white,
-                child: Text("Container1"),
-                alignment: Alignment.center,
-              ),
-              SizedBox(height: 20),
-              Container(
-                height: 100,
-                color: Colors.blue,
-                child: Text("Container2"),
-                alignment: Alignment.center,
-              ),
-            SizedBox(height: 20),
-            Container(
-                height: 100,
-                color: Colors.red,
-                child: Text("Container3"),
-                alignment: Alignment.center,
+                fontSize: 20.0,
+                letterSpacing: 2.5,
+                fontWeight: FontWeight.bold
               )
-            ]
-          ),
+            )
+          ]),
         ),
       ),
     );
   }
 }
-
